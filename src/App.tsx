@@ -28,10 +28,14 @@ function App() {
                             <Row key={gg.id} earthquake={gg} />
                         ))}
                     <Pagination
-                        data={earthquakes}
+                        data={earthquakes.filter((gg) =>
+                            gg.body[0].yer
+                                .toLocaleLowerCase()
+                                .includes(searchString.toLocaleLowerCase())
+                        )}
                         state={{ setCurrentPageNumber, currentPageNumber }}
                     />
-            <Footer />
+                    <Footer />
                 </section>
             )}
         </main>
