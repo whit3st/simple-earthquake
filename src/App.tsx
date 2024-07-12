@@ -31,9 +31,9 @@ function App() {
                         data={earthquakes}
                         state={{ setCurrentPageNumber, currentPageNumber }}
                     />
+            <Footer />
                 </section>
             )}
-            <Footer />
         </main>
     );
 }
